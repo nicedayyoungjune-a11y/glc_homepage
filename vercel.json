@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "redirects": [
+    { "source": "/website/Home.html", "destination": "/", "permanent": true },
+    { "source": "/website/About.html", "destination": "/about", "permanent": true },
+    { "source": "/website/Curriculum.html", "destination": "/curriculum", "permanent": true },
+    { "source": "/website/SmallBiz.html", "destination": "/smallbiz", "permanent": true },
+    { "source": "/website/Notices.html", "destination": "/notices", "permanent": true },
+    { "source": "/website/Videos.html", "destination": "/videos", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/about", "destination": "/index.html" },
+    { "source": "/curriculum", "destination": "/index.html" },
+    { "source": "/smallbiz", "destination": "/index.html" },
+    { "source": "/notices", "destination": "/index.html" },
+    { "source": "/videos", "destination": "/index.html" }
+  ]
+}
