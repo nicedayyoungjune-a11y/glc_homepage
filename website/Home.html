@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>(주)글로벌리더십센터</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>body{margin:0}.app{min-height:100vh;background:var(--neutral-warm)}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="PublicNav.jsx"></script>
+<script type="text/babel" src="PublicSections.jsx"></script>
+<script type="text/babel" src="QuickAction.jsx"></script>
+<script type="text/babel">
+function HomeHero() {
+  return (
+    <section style={{background:'var(--house-green)',color:'#fff',padding:'120px 40px 100px',position:'relative',overflow:'hidden'}}>
+      <div aria-hidden style={{position:'absolute',right:-40,top:-10,fontSize:280,fontWeight:700,letterSpacing:'-0.04em',lineHeight:1,color:'rgba(203,162,88,0.06)',userSelect:'none',pointerEvents:'none',fontFamily:'var(--font-serif)'}}>GLC</div>
+      <div style={{maxWidth:1180,margin:'0 auto',position:'relative'}}>
+        <div style={{display:'inline-flex',alignItems:'center',gap:8,padding:'4px 12px',borderRadius:50,border:'1px solid rgba(203,162,88,0.5)',color:'var(--gold)',fontSize:12,letterSpacing:'0.15em',textTransform:'uppercase',marginBottom:18}}>★ Since 2008 · 17 Years</div>
+        <h1 style={{fontSize:72,fontWeight:600,letterSpacing:'-0.6px',lineHeight:1.05,color:'#fff',marginBottom:24,maxWidth:900}}>
+          머리가 아닌 <span className="serif" style={{fontStyle:'italic',color:'var(--gold)'}}>가슴</span>으로<br/>
+          기억되는 교육.
+        </h1>
+        <p style={{fontSize:19,lineHeight:1.7,color:'rgba(255,255,255,0.78)',maxWidth:640,marginBottom:32}}>
+          (주)글로벌리더십센터는 300여 기업·공공기관과 함께 행동의 변화를 만드는 사회적 교육기업입니다.
+        </p>
+        <div style={{display:'flex',gap:12}}>
+          <a href="Curriculum.html" className="btn btn-on-dark-fill" style={{textDecoration:'none'}}>2026 교육과정 보기 →</a>
+          <a href="About.html" className="btn btn-on-dark-outline" style={{textDecoration:'none'}}>기관 소개</a>
+        </div>
+      </div>
+    </section>
+  );
+}
+function FeatureGrid() {
+  const cards = [
+    {kicker:'Curriculum',title:'2026 교육과정',desc:'대전인재개발원 협력 13개 표준 과정. 리더십·적극행정·AI·소양까지.',href:'Curriculum.html',cta:'과정 둘러보기'},
+    {kicker:'About',title:'기관 소개',desc:'17년의 발자취, CEO 메시지, 인재육성 5대 전략, 300여 고객사.',href:'About.html',cta:'GLC 알아보기'},
+    {kicker:'Videos',title:'교육 영상',desc:'온라인 학습 콘텐츠 라이브러리 (준비 중).',href:'Videos.html',cta:'곧 공개됩니다'},
+    {kicker:'Small Business',title:'소상공인 과정',desc:'소호진흥원 운영. 1인 창업·소상공인 맞춤 트랙 (준비 중).',href:'SmallBiz.html',cta:'곧 공개됩니다'},
+  ];
+  return (
+    <section style={{padding:'96px 40px',background:'var(--neutral-warm)'}}>
+      <div style={{maxWidth:1180,margin:'0 auto'}}>
+        <div style={{marginBottom:40}}>
+          <div style={{fontSize:12,letterSpacing:'0.2em',textTransform:'uppercase',color:'var(--text-black-soft)',marginBottom:10}}>What we offer</div>
+          <h2 style={{fontSize:40,fontWeight:600,letterSpacing:'-0.4px',color:'var(--text-black)',lineHeight:1.2,margin:0}}>
+            기관 맞춤형 교육의 <span style={{color:'var(--green-accent)'}}>네 가지 길.</span>
+          </h2>
+        </div>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:18}}>
+          {cards.map((c,i)=>(
+            <a key={i} href={c.href} style={{
+              background:'#fff',borderRadius:14,padding:'32px 32px 28px',textDecoration:'none',
+              boxShadow:'var(--shadow-card)',display:'flex',flexDirection:'column',gap:10,
+              borderTop:'3px solid var(--green-accent)',transition:'transform .2s ease',
+            }}>
+              <div style={{fontSize:11,letterSpacing:'0.2em',textTransform:'uppercase',color:'var(--green-accent)',fontWeight:700}}>{c.kicker}</div>
+              <h3 className="serif" style={{fontSize:28,fontWeight:600,letterSpacing:'-0.3px',color:'var(--glc-green)',margin:0}}>{c.title}</h3>
+              <p style={{fontSize:15,lineHeight:1.7,color:'var(--text-black)',margin:'4px 0 12px',flex:1}}>{c.desc}</p>
+              <div style={{fontSize:14,fontWeight:600,color:'var(--green-accent)',letterSpacing:'-0.01em'}}>{c.cta} →</div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+function App() {
+  return (
+    <div className="app" data-screen-label="Home · 홈">
+      <PublicNav route="home" setRoute={()=>{}} />
+      <HomeHero/>
+      <FeatureGrid/>
+      <CTABand/>
+      <PublicFooter/>
+      <QuickAction/>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

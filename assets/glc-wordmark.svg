@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
+  <g fill="#006241">
+    <text x="0" y="40" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="700" font-size="32" letter-spacing="-0.5">GLC</text>
+    <rect x="78" y="14" width="2" height="32"></rect>
+    <text x="90" y="28" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="600" font-size="13" letter-spacing="0.5">GLOBAL LEADERSHIP</text>
+    <text x="90" y="44" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="600" font-size="13" letter-spacing="0.5">CENTER</text>
+    <text x="0" y="68" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="500" font-size="13" letter-spacing="-0.2">글로벌리더십센터</text>
+  </g>
+</svg>

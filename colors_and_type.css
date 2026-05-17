@@ -1,0 +1,278 @@
+/* ============================================================
+   GLC Design System — colors_and_type.css
+   Warm cream canvas + four-tier green system (Starbucks-inspired)
+   1rem = 10px (font-size: 62.5% root trick)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Kalam:wght@400;700&display=swap');
+
+:root {
+  /* -------- Greens (four-tier) -------- */
+  --glc-green:        #006241;  /* H1, brand wordmark */
+  --green-accent:     #00754A;  /* primary CTAs */
+  --house-green:      #1E3932;  /* feature bands, footer */
+  --green-uplift:     #2B5148;  /* decorative dark green */
+  --green-light:      #D4E9E2;  /* form valid tint */
+
+  /* -------- Gold (Alumni only) -------- */
+  --gold:             #CBA258;
+  --gold-light:       #DFC49D;
+  --gold-lightest:    #FAF6EE;
+
+  /* -------- Surfaces -------- */
+  --white:            #FFFFFF;
+  --neutral-cool:     #F9F9F9;
+  --neutral-warm:     #F2F0EB;  /* primary page canvas */
+  --ceramic:          #EDEBE9;
+  --black:            #000000;
+
+  /* -------- Text -------- */
+  --text-black:       rgba(0, 0, 0, 0.87);
+  --text-black-soft:  rgba(0, 0, 0, 0.58);
+  --text-white:       rgba(255, 255, 255, 1);
+  --text-white-soft:  rgba(255, 255, 255, 0.70);
+  --text-rewards:     #33433D;
+
+  /* -------- Semantic -------- */
+  --red:              #C82014;
+  --yellow:           #FBBC05;
+  --red-tint:         hsl(4 82% 43% / 5%);
+  --green-tint:       hsl(160 32% 87% / 33%);
+
+  /* -------- Borders -------- */
+  --input-border:     #D6DBDE;
+  --hairline:         #E7E7E7;
+
+  /* -------- Spacing (rem-based, 1rem=10px) -------- */
+  --space-1:          0.4rem;   /*  4px */
+  --space-2:          0.8rem;   /*  8px */
+  --space-3:          1.6rem;   /* 16px */
+  --space-4:          2.4rem;   /* 24px */
+  --space-5:          3.2rem;   /* 32px */
+  --space-6:          4rem;     /* 40px */
+  --space-7:          4.8rem;   /* 48px */
+  --space-8:          5.6rem;   /* 56px */
+  --space-9:          6.4rem;   /* 64px */
+
+  --outer-gutter:        1.6rem;
+  --outer-gutter-md:     2.4rem;
+  --outer-gutter-lg:     4.0rem;
+
+  /* -------- Radii -------- */
+  --radius-card:      12px;
+  --radius-button:    50px;
+  --radius-input:     4px;
+  --radius-circle:    50%;
+
+  /* -------- Shadows -------- */
+  --shadow-card:      0 0 0.5px 0 rgba(0,0,0,0.14), 0 1px 1px 0 rgba(0,0,0,0.24);
+  --shadow-nav:       0 1px 3px rgba(0,0,0,0.10), 0 2px 2px rgba(0,0,0,0.06), 0 0 2px rgba(0,0,0,0.07);
+  --shadow-frap:      0 0 6px rgba(0,0,0,0.24), 0 8px 12px rgba(0,0,0,0.14);
+  --shadow-frap-active: 0 0 6px rgba(0,0,0,0.24), 0 8px 12px rgba(0,0,0,0);
+
+  /* -------- Motion -------- */
+  --duration-fast:    0.2s;
+  --duration-med:     0.3s;
+  --ease-out:         cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring:      cubic-bezier(0.32, 2.32, 0.61, 0.27);
+  --button-active-scale: 0.95;
+
+  /* -------- Type -------- */
+  --font-sans:        "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif:       "Lora", "Iowan Old Style", Georgia, serif;
+  --font-script:      "Kalam", "Comic Sans MS", cursive;
+
+  --tracking-tight:   -0.01em;
+  --tracking-tight-px: -0.16px;
+  --tracking-loose:   0.1em;
+  --tracking-looser:  0.15em;
+
+  --leading-tight:    1.2;
+  --leading-normal:   1.5;
+  --leading-body:     1.75;
+
+  /* -------- Type sizes (rem at 1rem=10px) -------- */
+  --text-1:  1.3rem;   /* 13px micro */
+  --text-2:  1.4rem;   /* 14px small */
+  --text-3:  1.6rem;   /* 16px body */
+  --text-4:  1.9rem;   /* 19px body large */
+  --text-h:  2.4rem;   /* 24px H1/H2 */
+  --text-8:  2.8rem;   /* 28px hero large */
+  --text-9:  3.6rem;   /* 36px jumbo */
+  --text-10: 5.0rem;   /* 50px display */
+}
+
+/* ---------- Root sizing trick: 1rem = 10px ---------- */
+html { font-size: 62.5%; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-3);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-black);
+  background: var(--neutral-warm);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Semantic typography ---------- */
+h1, .h1 {
+  font-family: var(--font-sans);
+  font-size: var(--text-h);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: var(--tracking-tight-px);
+  color: var(--glc-green);
+  margin: 0;
+}
+
+h2, .h2 {
+  font-family: var(--font-sans);
+  font-size: var(--text-h);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: var(--tracking-tight-px);
+  color: var(--text-black);
+  margin: 0;
+}
+
+h3, .h3 {
+  font-family: var(--font-sans);
+  font-size: var(--text-4);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-black);
+  margin: 0;
+}
+
+.display {
+  font-size: var(--text-10);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight-px);
+  color: var(--glc-green);
+}
+
+.jumbo {
+  font-size: var(--text-9);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight-px);
+}
+
+.hero-large {
+  font-size: var(--text-8);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: var(--tracking-tight-px);
+}
+
+p, .body {
+  font-size: var(--text-3);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-black);
+  margin: 0;
+}
+
+.body-lg {
+  font-size: var(--text-4);
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: var(--tracking-tight-px);
+}
+
+.small  { font-size: var(--text-2); letter-spacing: var(--tracking-tight); }
+.micro  { font-size: var(--text-1); letter-spacing: var(--tracking-tight); }
+
+.text-soft   { color: var(--text-black-soft); }
+.text-rewards{ color: var(--text-rewards); }
+.serif       { font-family: var(--font-serif); }
+.script      { font-family: var(--font-script); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: var(--text-3);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.2;
+  padding: 7px 16px;
+  border-radius: var(--radius-button);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--duration-fast) ease;
+  user-select: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn:active { transform: scale(var(--button-active-scale)); }
+
+.btn-primary {
+  background: var(--green-accent);
+  color: var(--white);
+  border-color: var(--green-accent);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--green-accent);
+  border-color: var(--green-accent);
+}
+.btn-black {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+  font-size: var(--text-2);
+}
+.btn-dark-outline {
+  background: transparent;
+  color: var(--text-black);
+  border-color: var(--text-black);
+  font-size: var(--text-2);
+}
+.btn-on-dark-fill {  /* white-on-green-band */
+  background: var(--white);
+  color: var(--green-accent);
+  border-color: var(--white);
+}
+.btn-on-dark-outline {
+  background: transparent;
+  color: var(--white);
+  border-color: var(--white);
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-4);
+}
+
+/* ---------- Surfaces ---------- */
+.surface-cream    { background: var(--neutral-warm); }
+.surface-ceramic  { background: var(--ceramic); }
+.surface-house    { background: var(--house-green); color: var(--text-white); }
+.surface-gold     { background: var(--gold-lightest); }
+
+/* ---------- Inputs ---------- */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-input);
+  background: var(--white);
+  font-family: var(--font-sans);
+  font-size: var(--text-3);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-black);
+  transition: border-color var(--duration-fast) ease;
+}
+.input-field:focus { border-color: var(--green-accent); outline: none; }
+.input-field.is-valid   { background: var(--green-tint); }
+.input-field.is-invalid { background: var(--red-tint); border-color: var(--red); }

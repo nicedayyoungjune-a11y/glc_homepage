@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>기관소개 · (주)글로벌리더십센터</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { margin: 0; }
+  .app { min-height: 100vh; background: var(--neutral-warm); }
+  /* Make wordmark img path resolve from website/ subfolder */
+  header img[alt="GLC"] { height: 40px; }
+  /* Soft entrance */
+  section { opacity: 0; transform: translateY(8px); animation: fadeUp .6s var(--ease-out, ease-out) forwards; }
+  section:nth-of-type(1){animation-delay:.05s}
+  section:nth-of-type(2){animation-delay:.10s}
+  section:nth-of-type(3){animation-delay:.15s}
+  @keyframes fadeUp { to { opacity: 1; transform: none; } }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="PublicNav.jsx"></script>
+<script type="text/babel" src="PublicSections.jsx"></script>
+<script type="text/babel" src="QuickAction.jsx"></script>
+<script type="text/babel" src="AboutHero.jsx"></script>
+<script type="text/babel" src="AboutCEO.jsx"></script>
+<script type="text/babel" src="AboutPhilosophy.jsx"></script>
+<script type="text/babel" src="AboutMethodology.jsx"></script>
+<script type="text/babel" src="AboutHistory.jsx"></script>
+<script type="text/babel" src="AboutCertifications.jsx"></script>
+<script type="text/babel" src="AboutClients.jsx"></script>
+<script type="text/babel" src="AboutImpact.jsx"></script>
+<script type="text/babel" src="AboutFacts.jsx"></script>
+<script type="text/babel">
+function NavShim() {
+  const [route, setRoute] = React.useState('about');
+  return <PublicNav route={route} setRoute={setRoute} />;
+}
+function App() {
+  return (
+    <div className="app" data-screen-label="About · 기관소개">
+      <NavShim />
+      <main>
+        <AboutHero />
+        <AboutCEO />
+        <AboutPhilosophy />
+        <AboutMethodology />
+        <AboutHistory />
+        <AboutCertifications />
+        <AboutClients />
+        <AboutImpact />
+        <AboutFacts />
+        <AboutCTA />
+      </main>
+      <PublicFooter />
+      <QuickAction />
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

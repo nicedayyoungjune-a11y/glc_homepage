@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>소상공인 지원 · (주)글로벌리더십센터</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { margin: 0; }
+  .app { min-height: 100vh; background: var(--neutral-warm); }
+  section { opacity: 0; transform: translateY(8px); animation: fadeUp .6s var(--ease-out, ease-out) forwards; }
+  section:nth-of-type(1){animation-delay:.05s}
+  section:nth-of-type(2){animation-delay:.10s}
+  section:nth-of-type(3){animation-delay:.15s}
+  section:nth-of-type(4){animation-delay:.20s}
+  @keyframes fadeUp { to { opacity: 1; transform: none; } }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="PublicNav.jsx"></script>
+<script type="text/babel" src="PublicSections.jsx"></script>
+<script type="text/babel" src="QuickAction.jsx"></script>
+<script type="text/babel" src="SmallBizHero.jsx"></script>
+<script type="text/babel" src="SmallBizTrust.jsx"></script>
+<script type="text/babel" src="SmallBizCourses.jsx"></script>
+<script type="text/babel" src="SmallBizConsulting.jsx"></script>
+<script type="text/babel">
+function SmallBizCTA() {
+  return (
+    <section style={{
+      background: 'var(--green-accent)', padding: '88px 40px', color: '#fff',
+      position: 'relative', overflow: 'hidden',
+    }}>
+      <div aria-hidden style={{
+        position: 'absolute', right: -60, top: -40, fontSize: 320,
+        fontWeight: 700, color: 'rgba(255,255,255,0.06)', letterSpacing: '-0.04em',
+        fontFamily: 'var(--font-serif)', lineHeight: 1, pointerEvents: 'none',
+      }}>GLC</div>
+      <div style={{
+        maxWidth: 1180, margin: '0 auto', display: 'grid',
+        gridTemplateColumns: '1.4fr 1fr', gap: 56, alignItems: 'center', position: 'relative',
+      }}>
+        <div>
+          <div style={{ fontSize: 12, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)', marginBottom: 14 }}>Talk to us</div>
+          <h2 style={{ fontSize: 40, fontWeight: 600, letterSpacing: '-0.4px', color: '#fff', lineHeight: 1.2, marginBottom: 16 }}>
+            소상공인 교육·컨설팅,<br/>무료 상담으로 시작하세요.
+          </h2>
+          <p style={{ fontSize: 16, lineHeight: 1.8, color: 'rgba(255,255,255,0.78)', maxWidth: 560, marginBottom: 22 }}>
+            사업장 현황을 말씀해 주시면 맞춤형 교육 프로그램과 컨설팅 플랜을 제안해 드립니다.
+            사회적기업 혜택으로 정부지원사업 연계도 함께 안내해 드립니다.
+          </p>
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+            {['소상공인 지식배움터 연계', '정부 지원사업 연계', '1:1 경영 컨설팅', 'SNS 마케팅 지원'].map((t, i) => (
+              <span key={i} style={{
+                padding: '6px 14px', borderRadius: 50,
+                border: '1px solid rgba(255,255,255,0.35)',
+                fontSize: 13, color: 'rgba(255,255,255,0.85)',
+              }}>{t}</span>
+            ))}
+          </div>
+        </div>
+        <div style={{
+          background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(4px)',
+          border: '1px solid rgba(255,255,255,0.18)',
+          padding: 28, borderRadius: 16,
+        }}>
+          {[
+            { l: '대표 전화', v: '042-826-0828' },
+            { l: '이메일', v: 'silveredu826@naver.com' },
+            { l: '상담 시간', v: '평일 09:00 – 18:00' },
+            { l: '소재지', v: '대전광역시 유성구 유성대로 736번길 62' },
+          ].map((c, i) => (
+            <div key={i} style={{
+              display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
+              padding: '12px 0', borderBottom: i === 3 ? 'none' : '1px solid rgba(255,255,255,0.12)',
+              flexWrap: 'wrap', gap: 8,
+            }}>
+              <span style={{ fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)' }}>{c.l}</span>
+              <span style={{ fontSize: 15, fontWeight: 600, color: '#fff', letterSpacing: '-0.16px' }}>{c.v}</span>
+            </div>
+          ))}
+          <button
+            className="btn"
+            style={{ marginTop: 20, width: '100%', background: '#fff', color: 'var(--green-accent)', borderColor: '#fff', fontSize: 15 }}
+            onClick={() => alert('상담 신청 페이지로 이동합니다.')}
+          >
+            소상공인 교육 상담 신청
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function NavShim() {
+  const [route, setRoute] = React.useState('smallbiz');
+  return <PublicNav route={route} setRoute={setRoute} />;
+}
+
+function App() {
+  return (
+    <div className="app" data-screen-label="SmallBiz · 소상공인">
+      <NavShim />
+      <main>
+        <SmallBizHero />
+        <SmallBizTrust />
+        <SmallBizCourses />
+        <SmallBizConsulting />
+        <SmallBizCTA />
+      </main>
+      <PublicFooter />
+      <QuickAction />
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
