@@ -697,6 +697,103 @@ a {
   line-height: 1.7;
 }
 
+.general-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.general-hero::after {
+  content: 'OPEN';
+  position: absolute;
+  right: 5%;
+  bottom: -38px;
+  color: rgba(203, 162, 88, 0.12);
+  font-family: var(--font-serif);
+  font-size: 150px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.general-hero .section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.general-section .smallbiz-tabs button.is-active {
+  background: var(--glc-green);
+}
+
+.general-index-card {
+  overflow: hidden;
+  border: 1px solid rgba(0, 98, 65, 0.18);
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: var(--shadow-card);
+}
+
+.general-index-head,
+.general-index-card button {
+  display: grid;
+  grid-template-columns: 68px minmax(220px, 1.1fr) 150px minmax(260px, 1.4fr);
+  align-items: center;
+}
+
+.general-index-head {
+  background: var(--glc-green);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.general-index-head span,
+.general-index-card button > * {
+  padding: 14px 16px;
+}
+
+.general-index-card button {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid rgba(0, 98, 65, 0.12);
+  background: var(--white);
+  color: var(--text-black);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  text-align: left;
+}
+
+.general-index-card button:nth-child(odd) {
+  background: rgba(250, 246, 238, 0.72);
+}
+
+.general-index-card button:hover {
+  background: rgba(0, 98, 65, 0.08);
+}
+
+.general-index-card button > span:first-child {
+  color: var(--glc-green);
+  font-size: 16px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.general-index-card strong {
+  color: var(--glc-green);
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.general-index-card em {
+  color: var(--gold);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.general-index-card button > span:last-child {
+  color: var(--text-black-soft);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
 @media (max-width: 900px) {
   .site-header {
     min-height: 72px;
@@ -750,6 +847,25 @@ a {
 
   .smallbiz-program-jump {
     grid-template-columns: 1fr;
+  }
+
+  .general-index-head {
+    display: none;
+  }
+
+  .general-index-card button {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 0 10px;
+    padding: 14px;
+  }
+
+  .general-index-card button > * {
+    padding: 4px 0;
+  }
+
+  .general-index-card em,
+  .general-index-card button > span:last-child {
+    grid-column: 2;
   }
 
   .footer-bottom {
