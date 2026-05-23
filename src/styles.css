@@ -902,6 +902,489 @@ a {
   line-height: 1.65;
 }
 
+.premium-hero {
+  overflow: hidden;
+  padding: 96px 40px 84px;
+  background: #f8f7f4;
+  color: #0f172a;
+}
+
+.premium-hero-inner,
+.premium-section-inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.premium-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.82fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.premium-kicker {
+  margin: 0 0 18px;
+  color: #b89b5e;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.premium-hero h1,
+.premium-section h2,
+.archive-wall h2,
+.philosophy-section blockquote {
+  margin: 0;
+  color: #0f172a;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.premium-hero h1 {
+  max-width: 760px;
+  font-size: clamp(44px, 6vw, 74px);
+  line-height: 1.12;
+}
+
+.premium-hero-copy > p:not(.premium-kicker) {
+  max-width: 650px;
+  margin-top: 24px;
+  color: rgba(15, 23, 42, 0.72);
+  font-size: 19px;
+  line-height: 1.85;
+  letter-spacing: 0;
+}
+
+.premium-trust-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.premium-trust-list span {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid rgba(30, 58, 95, 0.14);
+  background: #ffffff;
+  color: #1e3a5f;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+
+.premium-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.premium-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 1px solid #1e3a5f;
+  color: #1e3a5f;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.premium-btn-primary {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #ffffff;
+}
+
+.premium-btn-secondary {
+  background: transparent;
+}
+
+.editorial-visual {
+  position: relative;
+  min-height: 540px;
+  padding: 42px;
+  border: 1px solid rgba(30, 58, 95, 0.16);
+  background: #ffffff;
+  box-shadow: 0 28px 80px rgba(15, 23, 42, 0.12);
+}
+
+.editorial-visual::before {
+  content: '';
+  position: absolute;
+  inset: 24px;
+  border: 1px solid rgba(184, 155, 94, 0.28);
+  pointer-events: none;
+}
+
+.report-sheet {
+  position: relative;
+  z-index: 2;
+  width: 72%;
+  padding: 26px;
+  border: 1px solid rgba(30, 58, 95, 0.18);
+  background: #f8f7f4;
+}
+
+.report-sheet span,
+.archive-plaque span {
+  display: block;
+  color: #b89b5e;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.report-sheet strong {
+  display: block;
+  margin-top: 28px;
+  color: #0f172a;
+  font-family: var(--font-serif);
+  font-size: 32px;
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+.report-sheet em {
+  display: block;
+  margin-top: 50px;
+  color: rgba(15, 23, 42, 0.5);
+  font-style: normal;
+  letter-spacing: 0;
+}
+
+.book-stack {
+  position: absolute;
+  right: 48px;
+  bottom: 92px;
+  z-index: 3;
+  display: grid;
+  gap: 14px;
+  width: 270px;
+}
+
+.book {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  padding: 20px 24px;
+  border-left: 8px solid #b89b5e;
+  box-shadow: 0 18px 32px rgba(15, 23, 42, 0.16);
+  transform: rotate(-2deg);
+}
+
+.book span {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.book-navy {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.book-blue {
+  margin-left: 34px;
+  background: #1e3a5f;
+  color: #ffffff;
+  transform: rotate(1.6deg);
+}
+
+.book-cream {
+  margin-left: 68px;
+  background: #f8f7f4;
+  color: #0f172a;
+  transform: rotate(-1deg);
+}
+
+.archive-plaque {
+  position: absolute;
+  left: 42px;
+  bottom: 42px;
+  z-index: 3;
+  width: 210px;
+  padding: 22px;
+  border-top: 3px solid #b89b5e;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.archive-plaque strong {
+  display: block;
+  margin-top: 10px;
+  color: #ffffff;
+  font-size: 30px;
+  letter-spacing: 0;
+}
+
+.archive-wall {
+  overflow: hidden;
+  padding: 72px 0;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.archive-wall-head {
+  width: min(1180px, calc(100% - 80px));
+  margin: 0 auto 36px;
+}
+
+.archive-wall h2 {
+  max-width: 780px;
+  color: #ffffff;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.2;
+}
+
+.archive-flow {
+  border-top: 1px solid rgba(229, 231, 235, 0.14);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.14);
+}
+
+.archive-track {
+  display: flex;
+  width: max-content;
+  animation: archiveFlow 70s linear infinite;
+}
+
+.archive-flow:hover .archive-track {
+  animation-play-state: paused;
+}
+
+.archive-item {
+  min-width: 280px;
+  padding: 32px 42px;
+  border-right: 1px solid rgba(229, 231, 235, 0.12);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.archive-item span {
+  display: block;
+  color: rgba(229, 231, 235, 0.44);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.archive-item strong {
+  display: block;
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: var(--font-serif);
+  font-size: 22px;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.archive-item:hover span,
+.archive-item:hover strong {
+  color: #b89b5e;
+}
+
+@keyframes archiveFlow {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.premium-section {
+  padding: 92px 40px;
+  background: #f8f7f4;
+}
+
+.premium-section h2 {
+  max-width: 780px;
+  margin-bottom: 36px;
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.22;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border: 1px solid rgba(30, 58, 95, 0.14);
+  background: #ffffff;
+}
+
+.metric-card {
+  min-height: 190px;
+  padding: 30px 24px;
+  border-right: 1px solid rgba(30, 58, 95, 0.12);
+}
+
+.metric-card:last-child {
+  border-right: 0;
+}
+
+.metric-card strong {
+  display: block;
+  color: #1e3a5f;
+  font-family: var(--font-serif);
+  font-size: 46px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.metric-card span {
+  display: block;
+  margin-top: 22px;
+  color: rgba(15, 23, 42, 0.72);
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.program-section {
+  background: #ffffff;
+}
+
+.premium-section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  gap: 54px;
+  align-items: end;
+  margin-bottom: 36px;
+}
+
+.premium-section-heading h2 {
+  margin-bottom: 0;
+}
+
+.premium-section-heading > p,
+.books-layout > div:first-child > p,
+.philosophy-inner > p {
+  color: rgba(15, 23, 42, 0.68);
+  font-size: 17px;
+  line-height: 1.85;
+  letter-spacing: 0;
+}
+
+.institutional-program-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.institutional-program-card {
+  min-height: 285px;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border: 1px solid rgba(30, 58, 95, 0.12);
+  background: #f8f7f4;
+}
+
+.institutional-program-card span {
+  color: #b89b5e;
+  font-family: var(--font-serif);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.institutional-program-card h3 {
+  margin-top: 32px;
+  color: #0f172a;
+  font-size: 22px;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.institutional-program-card p {
+  margin-top: 18px;
+  color: rgba(15, 23, 42, 0.64);
+  font-size: 15px;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+
+.books-section {
+  background: #1e3a5f;
+  color: #ffffff;
+}
+
+.books-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(440px, 1fr);
+  gap: 60px;
+  align-items: start;
+}
+
+.books-section h2 {
+  color: #ffffff;
+}
+
+.books-layout > div:first-child > p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.book-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.book-archive-card {
+  min-height: 215px;
+  padding: 28px;
+  border: 1px solid rgba(248, 247, 244, 0.18);
+  background: rgba(248, 247, 244, 0.06);
+}
+
+.book-archive-card span {
+  display: block;
+  color: #f8f7f4;
+  font-family: var(--font-serif);
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.book-archive-card p {
+  margin-top: 24px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+
+.philosophy-section {
+  padding: 110px 40px;
+  background: #f8f7f4;
+}
+
+.philosophy-inner {
+  max-width: 930px;
+}
+
+.philosophy-section blockquote {
+  margin: 0;
+  font-size: clamp(40px, 5vw, 68px);
+  line-height: 1.18;
+}
+
+.philosophy-inner > p {
+  max-width: 760px;
+  margin-top: 34px;
+}
+
 @media (max-width: 900px) {
   .site-header {
     min-height: 72px;
@@ -945,6 +1428,34 @@ a {
   .smallbiz-detail-grid,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .premium-hero-inner,
+  .premium-section-heading,
+  .books-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .premium-trust-list,
+  .metric-grid,
+  .institutional-program-grid,
+  .book-archive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card {
+    min-height: auto;
+    border-right: 0;
+    border-bottom: 1px solid rgba(30, 58, 95, 0.12);
+  }
+
+  .metric-card:last-child {
+    border-bottom: 0;
+  }
+
+  .editorial-visual {
+    min-height: 480px;
   }
 
   .curriculum-toolbar,
@@ -1008,9 +1519,17 @@ a {
 @media (max-width: 560px) {
   .hero-section,
   .page-hero,
-  .section {
+  .section,
+  .premium-hero,
+  .premium-section,
+  .philosophy-section {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .premium-hero {
+    padding-top: 70px;
+    padding-bottom: 64px;
   }
 
   .hero-section {
@@ -1028,6 +1547,69 @@ a {
 
   .section h2 {
     font-size: 30px;
+  }
+
+  .premium-hero h1 {
+    font-size: 42px;
+  }
+
+  .premium-trust-list span {
+    min-height: auto;
+  }
+
+  .editorial-visual {
+    min-height: 430px;
+    padding: 24px;
+  }
+
+  .editorial-visual::before {
+    inset: 14px;
+  }
+
+  .report-sheet {
+    width: 86%;
+  }
+
+  .report-sheet strong {
+    font-size: 25px;
+  }
+
+  .book-stack {
+    right: 22px;
+    bottom: 86px;
+    width: 220px;
+  }
+
+  .book {
+    min-height: 70px;
+  }
+
+  .book span {
+    font-size: 20px;
+  }
+
+  .archive-plaque {
+    left: 24px;
+    bottom: 24px;
+    width: 180px;
+  }
+
+  .archive-wall-head {
+    width: calc(100% - 40px);
+  }
+
+  .archive-item {
+    min-width: 240px;
+    padding: 26px 28px;
+  }
+
+  .premium-section h2,
+  .archive-wall h2 {
+    font-size: 34px;
+  }
+
+  .philosophy-section blockquote {
+    font-size: 38px;
   }
 
   .curriculum-filter {
