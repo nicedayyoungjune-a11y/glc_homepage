@@ -483,6 +483,220 @@ a {
   line-height: 1.8;
 }
 
+.smallbiz-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.smallbiz-hero::after {
+  content: 'SMB';
+  position: absolute;
+  right: 6%;
+  bottom: -34px;
+  color: rgba(0, 98, 65, 0.08);
+  font-family: var(--font-serif);
+  font-size: 150px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.smallbiz-hero .section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.smallbiz-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.smallbiz-hero-stats span {
+  padding: 8px 16px;
+  border: 1px solid rgba(0, 98, 65, 0.3);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--glc-green);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.smallbiz-section {
+  background: var(--neutral-warm);
+}
+
+.smallbiz-tabs {
+  display: inline-flex;
+  gap: 8px;
+  padding: 6px;
+  margin-bottom: 28px;
+  border: 1px solid rgba(0, 98, 65, 0.16);
+  border-radius: 999px;
+  background: var(--white);
+  box-shadow: var(--shadow-card);
+}
+
+.smallbiz-tabs button {
+  min-height: 42px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-black-soft);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.smallbiz-tabs button.is-active {
+  background: var(--green-accent);
+  color: var(--white);
+}
+
+.smallbiz-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 460px);
+  gap: 40px;
+  align-items: end;
+  margin-bottom: 24px;
+}
+
+.smallbiz-toolbar h2 {
+  margin-bottom: 0;
+}
+
+.smallbiz-toolbar > p {
+  color: var(--text-black-soft);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.smallbiz-overview-image {
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: var(--shadow-card);
+}
+
+.smallbiz-overview-image img {
+  width: 100%;
+  display: block;
+}
+
+.smallbiz-program-jump {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.smallbiz-program-jump button {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  min-height: 68px;
+  padding: 12px 16px;
+  border: 1px solid rgba(0, 98, 65, 0.18);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--glc-green);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.45;
+  text-align: left;
+  transition: border-color var(--duration-fast) ease, transform var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
+}
+
+.smallbiz-program-jump button:hover {
+  border-color: var(--green-accent);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-1px);
+}
+
+.smallbiz-program-jump span,
+.smallbiz-program-body span {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--glc-green);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.smallbiz-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.smallbiz-program-card {
+  scroll-margin-top: 110px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: var(--shadow-card);
+}
+
+.smallbiz-program-card a {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+}
+
+.smallbiz-program-image {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--ceramic);
+}
+
+.smallbiz-program-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform var(--duration-med) var(--ease-out);
+}
+
+.smallbiz-program-card:hover img {
+  transform: scale(1.025);
+}
+
+.smallbiz-program-body {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 8px 12px;
+  min-height: 190px;
+  padding: 22px;
+  border-top: 3px solid var(--green-accent);
+}
+
+.smallbiz-program-body h3 {
+  color: var(--glc-green);
+  font-size: 20px;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.smallbiz-program-body p {
+  grid-column: 2;
+  color: var(--text-black-soft);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
 @media (max-width: 900px) {
   .site-header {
     min-height: 72px;
@@ -523,13 +737,19 @@ a {
   .card-grid,
   .program-list,
   .curriculum-gallery,
+  .smallbiz-detail-grid,
   .footer-grid {
     grid-template-columns: 1fr;
   }
 
-  .curriculum-toolbar {
+  .curriculum-toolbar,
+  .smallbiz-toolbar {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .smallbiz-program-jump {
+    grid-template-columns: 1fr;
   }
 
   .footer-bottom {
@@ -569,6 +789,22 @@ a {
 
   .curriculum-filter button {
     padding: 0 10px;
+  }
+
+  .smallbiz-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    border-radius: 18px;
+  }
+
+  .smallbiz-tabs button {
+    padding: 0 10px;
+  }
+
+  .smallbiz-program-jump button {
+    grid-template-columns: 42px minmax(0, 1fr);
+    font-size: 15px;
   }
 
   .site-footer {
