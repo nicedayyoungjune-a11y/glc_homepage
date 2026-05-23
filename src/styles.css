@@ -472,6 +472,114 @@ a {
   line-height: 1.7;
 }
 
+.curriculum-overview-panel {
+  display: grid;
+  gap: 24px;
+}
+
+.curriculum-overview-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.curriculum-overview-card {
+  display: grid;
+  gap: 8px;
+  min-height: 132px;
+  align-content: center;
+  padding: 24px;
+  border: 1px solid rgba(0, 98, 65, 0.16);
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+}
+
+.curriculum-overview-card span {
+  color: var(--green-accent);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.curriculum-overview-card strong {
+  color: var(--glc-green);
+  font-family: var(--font-serif);
+  font-size: 48px;
+  line-height: 1;
+}
+
+.curriculum-overview-card em {
+  color: var(--text-black-soft);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.curriculum-index-card {
+  overflow: hidden;
+  border: 1px solid rgba(0, 98, 65, 0.16);
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: var(--shadow-card);
+}
+
+.curriculum-index-head,
+.curriculum-index-card button {
+  display: grid;
+  grid-template-columns: 68px 130px minmax(220px, 1fr) minmax(280px, 1.4fr);
+  align-items: center;
+}
+
+.curriculum-index-head {
+  background: var(--glc-green);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.curriculum-index-head span,
+.curriculum-index-card button > * {
+  padding: 16px 18px;
+}
+
+.curriculum-index-card button {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid rgba(0, 98, 65, 0.12);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  text-align: left;
+}
+
+.curriculum-index-card button:hover {
+  background: rgba(0, 98, 65, 0.06);
+}
+
+.curriculum-index-card button > span:first-child {
+  color: var(--gold);
+  font-weight: 900;
+  text-align: center;
+}
+
+.curriculum-index-card button em {
+  color: var(--green-accent);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.curriculum-index-card button strong {
+  color: var(--glc-green);
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.curriculum-index-card button > span:last-child {
+  color: var(--text-black-soft);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
 .curriculum-note h2 {
   margin-bottom: 12px;
 }
@@ -845,6 +953,30 @@ a {
     gap: 12px;
   }
 
+  .curriculum-overview-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .curriculum-index-head {
+    display: none;
+  }
+
+  .curriculum-index-card button {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 0 10px;
+    padding: 14px;
+  }
+
+  .curriculum-index-card button > * {
+    padding: 4px 0;
+  }
+
+  .curriculum-index-card button em,
+  .curriculum-index-card button strong,
+  .curriculum-index-card button > span:last-child {
+    grid-column: 2;
+  }
+
   .smallbiz-program-jump {
     grid-template-columns: 1fr;
   }
@@ -905,6 +1037,10 @@ a {
 
   .curriculum-filter button {
     padding: 0 10px;
+  }
+
+  .curriculum-overview-summary {
+    grid-template-columns: 1fr;
   }
 
   .smallbiz-tabs {
