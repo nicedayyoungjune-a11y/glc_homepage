@@ -12,10 +12,6 @@
     { "source": "/website/Videos.html", "destination": "/videos", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/about", "destination": "/index.html" },
-    { "source": "/curriculum", "destination": "/index.html" },
-    { "source": "/smallbiz", "destination": "/index.html" },
-    { "source": "/notices", "destination": "/index.html" },
-    { "source": "/videos", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
