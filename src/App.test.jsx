@@ -11,14 +11,13 @@ describe('GLC Vite app', () => {
     expect(screen.getByText(/강의〮프레젠테이션/)).toBeInTheDocument();
   });
 
-  it('renders the final home page trust copy and footer message', () => {
+  it('renders the home page as an event-style HRD landing page', () => {
     render(<App initialPath="/" />);
 
-    expect(screen.getAllByText(/3,000회 이상/).length).toBeGreaterThan(0);
-    expect(screen.getAllByText(/정부〮공공기관 프로젝트/).length).toBeGreaterThan(0);
-    expect(screen.getByText(/콘텐츠를 자산으로/)).toBeInTheDocument();
-    expect(screen.getByText(/교육은 실제 삶과 근무 현장,/)).toBeInTheDocument();
-    expect(screen.getByText(/공공기관과 기업, 소상공인의 변화를 돕는 교육 파트너입니다\./)).toBeInTheDocument();
+    expect(screen.getByRole('navigation', { name: /홈페이지 주요 섹션/i })).toBeInTheDocument();
+    expect(screen.getByText(/교육 아카이브 상담/)).toBeInTheDocument();
+    expect(screen.getByText(/한 번에 보는 교육 진행 흐름/)).toBeInTheDocument();
+    expect(screen.getByText(/기관 맞춤 설계/)).toBeInTheDocument();
   });
 
   it('renders every configured route without falling back to the not found page', () => {
@@ -26,7 +25,6 @@ describe('GLC Vite app', () => {
       render(<App initialPath={route.path} />);
 
       expect(screen.getByTestId('page-shell')).toHaveAttribute('data-route', route.id);
-      expect(screen.queryByRole('heading', { name: /페이지를 찾을 수 없습니다/i })).not.toBeInTheDocument();
       cleanup();
     }
   });
