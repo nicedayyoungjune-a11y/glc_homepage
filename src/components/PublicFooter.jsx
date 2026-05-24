@@ -6,6 +6,7 @@ export default function PublicFooter() {
           <strong className="footer-brand">(주)글로벌리더십센터</strong>
           <p>
             공공기관과 기업, 소상공인의 변화를 돕는 교육 파트너입니다.
+            <br />
             교육과정, 워크숍, 맞춤 컨설팅을 함께 설계합니다.
           </p>
         </div>
