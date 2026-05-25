@@ -1,3 +1,5 @@
+import { heroPromotions } from '../data/heroPromotions.js';
+
 const partnerArchives = [
   {
     name: 'KORAIL',
@@ -89,15 +91,21 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hrd-hero-panel" aria-label="책과 실제 교육 현장을 결합한 메인 비주얼">
-            <img className="hrd-hero-photo hrd-hero-photo-main" src="/home-assets/field-workshop-wall.jpg" alt="참여자들이 벽면에 워크숍 결과물을 정리하는 현장" />
-            <img className="hrd-hero-photo hrd-hero-photo-wide" src="/home-assets/field-police-activity.jpg" alt="충남지방경찰청 교육 실습 현장" />
-            <img className="hrd-hero-photo hrd-hero-photo-side" src="/home-assets/field-youth-leadership.jpg" alt="어린이 리더십 교육 단체 활동" />
-            <img className="hrd-hero-photo hrd-hero-photo-accent" src="/home-assets/field-coast-guard-class.jpg" alt="해양경찰 대상 강의 현장" />
-            <img className="hrd-book-cover" src="/home-assets/lecture-book.png" alt="저서 강의의 기술 표지" />
-            <div className="hrd-hero-badge">
-              <span>PUBLIC EDUCATION ARCHIVE</span>
-              <strong>SINCE 2008</strong>
+          <div className="hrd-hero-panel hrd-hero-promo-panel" aria-label="추천 교육 프로그램">
+            <div className="hrd-hero-promo-head">
+              <span>Featured Programs</span>
+              <strong>지금 운영 가능한 교육 과정</strong>
+            </div>
+            <div className="hrd-hero-promo-list">
+              {heroPromotions.map((promotion) => (
+                <a className="hrd-hero-promo-card" href={promotion.link} key={promotion.title}>
+                  <img src={promotion.image} alt="" loading="eager" />
+                  <span>{promotion.eyebrow}</span>
+                  <strong>{promotion.title}</strong>
+                  <p>{promotion.summary}</p>
+                  <em>{promotion.cta}</em>
+                </a>
+              ))}
             </div>
           </div>
         </div>

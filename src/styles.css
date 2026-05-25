@@ -2050,7 +2050,8 @@ a {
 
   .documentary-program-card,
   .partner-logo-frame,
-  .partner-logo span {
+  .partner-logo span,
+  .hrd-hero-promo-card img {
     transition: none;
   }
 }
@@ -2215,95 +2216,156 @@ a {
 
 .hrd-hero-panel {
   position: relative;
-  min-height: 590px;
+  min-height: 560px;
 }
 
-.hrd-hero-photo,
-.hrd-book-cover {
+.hrd-hero-promo-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  padding: 24px;
+  border: 1px solid rgba(223, 196, 157, 0.24);
+  background:
+    linear-gradient(145deg, rgba(248, 247, 244, 0.12), rgba(248, 247, 244, 0.03)),
+    rgba(15, 38, 34, 0.58);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.24);
+}
+
+.hrd-hero-promo-panel::before {
+  content: '';
   position: absolute;
-  display: block;
-  object-fit: cover;
-  border: 1px solid rgba(223, 196, 157, 0.22);
-  box-shadow: 0 24px 58px rgba(0, 0, 0, 0.32);
+  inset: -1px;
+  z-index: -1;
+  background:
+    linear-gradient(135deg, rgba(203, 162, 88, 0.46), transparent 28%),
+    radial-gradient(circle at 88% 20%, rgba(0, 158, 119, 0.26), transparent 32%);
+  filter: blur(18px);
 }
 
-.hrd-hero-photo {
-  filter: saturate(0.58) sepia(0.08) contrast(1.1) brightness(0.72);
+.hrd-hero-promo-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 2px 4px 4px;
 }
 
-.hrd-hero-photo-main {
-  inset: 18px 0 auto auto;
-  width: 72%;
-  height: 43%;
-  object-position: center 40%;
-}
-
-.hrd-hero-photo-wide {
-  left: 0;
-  bottom: 72px;
-  z-index: 2;
-  width: 52%;
-  height: 31%;
-  object-position: center 48%;
-  filter: saturate(0.5) sepia(0.1) contrast(1.12) brightness(0.66);
-}
-
-.hrd-hero-photo-side {
-  right: 26px;
-  bottom: 168px;
-  z-index: 3;
-  width: 34%;
-  height: 25%;
-  object-position: center 44%;
-  filter: saturate(0.56) sepia(0.08) contrast(1.08) brightness(0.7);
-}
-
-.hrd-hero-photo-accent {
-  left: 42px;
-  top: 122px;
-  z-index: 1;
-  width: 34%;
-  height: 24%;
-  object-position: center 48%;
-  filter: saturate(0.44) sepia(0.12) contrast(1.14) brightness(0.58);
-}
-
-.hrd-book-cover {
-  right: 34px;
-  bottom: 36px;
-  z-index: 5;
-  width: min(32%, 210px);
-  height: auto;
-  border: 1px solid rgba(223, 196, 157, 0.44);
-  transform: rotate(-2deg);
-}
-
-.hrd-hero-badge {
-  position: absolute;
-  left: 34px;
-  top: 32px;
-  z-index: 6;
-  width: 230px;
-  padding: 18px;
-  border-left: 4px solid var(--gold);
-  background: rgba(15, 38, 34, 0.92);
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
-}
-
-.hrd-hero-badge span {
-  display: block;
+.hrd-hero-promo-head span {
   color: var(--gold-light);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 900;
   letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.hrd-hero-badge strong {
+.hrd-hero-promo-head strong {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.hrd-hero-promo-list {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  min-height: 420px;
+}
+
+.hrd-hero-promo-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  align-content: end;
+  min-height: 202px;
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 24px 58px rgba(0, 0, 0, 0.25);
+}
+
+.hrd-hero-promo-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(9, 32, 28, 0.92), rgba(9, 32, 28, 0.5) 54%, rgba(9, 32, 28, 0.2)),
+    linear-gradient(0deg, rgba(0, 98, 65, 0.42), transparent);
+}
+
+.hrd-hero-promo-card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: var(--gold);
+}
+
+.hrd-hero-promo-card img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.74) contrast(1.08) brightness(0.68);
+  transform: scale(1.02);
+  transition: transform var(--duration-normal) ease, filter var(--duration-normal) ease;
+}
+
+.hrd-hero-promo-card span,
+.hrd-hero-promo-card strong,
+.hrd-hero-promo-card p,
+.hrd-hero-promo-card em {
+  max-width: 72%;
+  letter-spacing: 0;
+}
+
+.hrd-hero-promo-card span {
+  color: var(--gold-light);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.hrd-hero-promo-card strong {
   display: block;
   margin-top: 8px;
-  color: var(--white);
-  font-size: 24px;
-  letter-spacing: 0;
+  color: #ffffff;
+  font-size: 26px;
+  line-height: 1.22;
+  word-break: keep-all;
+  text-wrap: balance;
+}
+
+.hrd-hero-promo-card p {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.hrd-hero-promo-card em {
+  display: inline-flex;
+  width: max-content;
+  margin-top: 16px;
+  padding: 8px 12px;
+  background: rgba(203, 162, 88, 0.92);
+  color: #0f2622;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.hrd-hero-promo-card:hover img {
+  filter: saturate(0.88) contrast(1.12) brightness(0.76);
+  transform: scale(1.06);
 }
 
 .hrd-hero-metrics {
@@ -2581,7 +2643,11 @@ a {
   }
 
   .hrd-hero-panel {
-    min-height: 560px;
+    min-height: auto;
+  }
+
+  .hrd-hero-promo-list {
+    min-height: 430px;
   }
 
   .hrd-hero-metrics {
@@ -2626,44 +2692,33 @@ a {
   }
 
   .hrd-hero-panel {
-    min-height: 470px;
+    padding: 16px;
   }
 
-  .hrd-hero-photo-main {
-    width: 78%;
-    height: 38%;
+  .hrd-hero-promo-head {
+    display: grid;
+    align-items: start;
   }
 
-  .hrd-hero-photo-wide {
-    bottom: 72px;
-    width: 60%;
-    height: 28%;
+  .hrd-hero-promo-list {
+    min-height: 0;
+    grid-template-rows: none;
   }
 
-  .hrd-hero-photo-side {
-    right: 18px;
-    bottom: 146px;
-    width: 42%;
-    height: 22%;
+  .hrd-hero-promo-card {
+    min-height: 260px;
+    padding: 22px;
   }
 
-  .hrd-hero-photo-accent {
-    left: 20px;
-    top: 116px;
-    width: 38%;
-    height: 20%;
+  .hrd-hero-promo-card span,
+  .hrd-hero-promo-card strong,
+  .hrd-hero-promo-card p,
+  .hrd-hero-promo-card em {
+    max-width: 100%;
   }
 
-  .hrd-book-cover {
-    right: 20px;
-    bottom: 42px;
-    width: 34%;
-  }
-
-  .hrd-hero-badge {
-    left: 20px;
-    top: 24px;
-    width: 190px;
+  .hrd-hero-promo-card strong {
+    font-size: 23px;
   }
 
   .hrd-hero-metrics {
