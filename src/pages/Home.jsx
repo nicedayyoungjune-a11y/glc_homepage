@@ -90,8 +90,10 @@ export default function Home() {
           </div>
 
           <div className="hrd-hero-panel" aria-label="책과 실제 교육 현장을 결합한 메인 비주얼">
-            <img className="hrd-hero-photo hrd-hero-photo-main" src="/home-assets/workshop-wall.jpg" alt="워크숍 현장 기록" />
-            <img className="hrd-hero-photo hrd-hero-photo-side" src="/home-assets/lecture-room.jpg" alt="공공 교육 강의 현장" />
+            <img className="hrd-hero-photo hrd-hero-photo-main" src="/home-assets/field-workshop-wall.jpg" alt="참여자들이 벽면에 워크숍 결과물을 정리하는 현장" />
+            <img className="hrd-hero-photo hrd-hero-photo-wide" src="/home-assets/field-police-activity.jpg" alt="충남지방경찰청 교육 실습 현장" />
+            <img className="hrd-hero-photo hrd-hero-photo-side" src="/home-assets/field-youth-leadership.jpg" alt="어린이 리더십 교육 단체 활동" />
+            <img className="hrd-hero-photo hrd-hero-photo-accent" src="/home-assets/field-coast-guard-class.jpg" alt="해양경찰 대상 강의 현장" />
             <img className="hrd-book-cover" src="/home-assets/lecture-book.png" alt="저서 강의의 기술 표지" />
             <div className="hrd-hero-badge">
               <span>PUBLIC EDUCATION ARCHIVE</span>
