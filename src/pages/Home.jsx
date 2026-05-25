@@ -76,22 +76,17 @@ export default function Home() {
     <>
       <section className="hrd-landing-hero" aria-labelledby="home-title">
         <div className="hrd-hero-inner">
-          <div className="hrd-hero-copy">
-            <p className="premium-kicker">SINCE 2008</p>
-            <h1 id="home-title" aria-label="교육과 컨설팅으로 사람과 기업의 성장을 만듭니다.">
-              교육과 컨설팅으로
-              <br />
-              사람과 기업의
-              <br />
-              성장을 만듭니다.
-            </h1>
-            <div className="hrd-hero-actions" aria-label="홈페이지 주요 행동">
-              <a className="hrd-primary-cta" href="/curriculum">교육 아카이브 상담</a>
-              <a className="hrd-secondary-cta" href="#programs">과정 분야 보기</a>
-            </div>
-          </div>
-
           <div className="hrd-hero-panel hrd-hero-promo-panel" aria-label="추천 교육 프로그램">
+            <div className="hrd-hero-copy">
+              <p className="premium-kicker">SINCE 2008</p>
+              <h1 id="home-title" aria-label="교육과 컨설팅으로 사람과 기업의 성장을 만듭니다.">
+                교육과 컨설팅으로 사람과 기업의 성장을 만듭니다.
+              </h1>
+              <div className="hrd-hero-actions" aria-label="홈페이지 주요 행동">
+                <a className="hrd-primary-cta" href="/curriculum">교육 아카이브 상담</a>
+                <a className="hrd-secondary-cta" href="#programs">과정 분야 보기</a>
+              </div>
+            </div>
             <div className="hrd-hero-promo-head">
               <span>Open Registration</span>
               <strong>AI 실전 교육 신청 안내</strong>

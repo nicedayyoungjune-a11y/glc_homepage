@@ -2233,31 +2233,28 @@ a {
 .hrd-hero-inner {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(440px, 1fr);
-  gap: 58px;
-  width: min(1180px, 100%);
-  align-items: center;
+  width: min(1160px, 100%);
   margin: 0 auto;
 }
 
 .hrd-hero-copy h1 {
-  max-width: 720px;
+  max-width: 940px;
   margin: 0;
   color: var(--white);
   font-family: var(--font-sans);
-  font-size: clamp(46px, 5.8vw, 78px);
+  font-size: clamp(42px, 5.2vw, 72px);
   font-weight: 800;
-  line-height: 1.08;
+  line-height: 1.12;
   letter-spacing: 0;
   word-break: keep-all;
+  text-wrap: balance;
 }
 
 .hrd-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 34px;
+  margin-top: 26px;
 }
 
 .hrd-primary-cta,
@@ -2284,15 +2281,15 @@ a {
 
 .hrd-hero-panel {
   position: relative;
-  min-height: 560px;
+  min-height: auto;
 }
 
 .hrd-hero-promo-panel {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 16px;
-  padding: 24px;
+  gap: 22px;
+  padding: clamp(24px, 4vw, 42px);
   border: 1px solid rgba(223, 196, 157, 0.24);
   background:
     linear-gradient(145deg, rgba(248, 247, 244, 0.12), rgba(248, 247, 244, 0.03)),
@@ -2314,7 +2311,8 @@ a {
 .hrd-hero-promo-head {
   display: grid;
   gap: 8px;
-  padding: 20px 22px;
+  max-width: 860px;
+  padding: 18px 22px;
   border-left: 5px solid var(--gold);
   background:
     linear-gradient(90deg, rgba(7, 22, 31, 0.9), rgba(7, 22, 31, 0.58)),
@@ -2348,7 +2346,7 @@ a {
 .hrd-hero-promo-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 22px;
 }
 
 .hrd-hero-promo-card {
@@ -2356,7 +2354,7 @@ a {
   display: grid;
   grid-template-rows: minmax(0, 1fr) auto;
   min-height: 0;
-  padding: 12px;
+  padding: 14px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
@@ -2398,7 +2396,7 @@ a {
 
 .hrd-hero-promo-caption strong {
   color: #ffffff;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.35;
   letter-spacing: 0;
   word-break: keep-all;
@@ -2690,7 +2688,6 @@ a {
 }
 
 @media (max-width: 1020px) {
-  .hrd-hero-inner,
   .hrd-section-heading-split,
   .hrd-proof-grid,
   .hrd-benefit-grid,
@@ -2736,7 +2733,7 @@ a {
   }
 
   .hrd-hero-copy h1 {
-    font-size: 40px;
+    font-size: 38px;
   }
 
   .hrd-hero-actions {
