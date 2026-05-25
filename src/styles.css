@@ -226,20 +226,87 @@ a {
   text-transform: uppercase;
 }
 
-.notice-list {
+.notice-grid {
   display: grid;
-  gap: 12px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
 
-.notice-list li {
-  padding: 22px 24px;
-  border-left: 3px solid var(--green-accent);
+.notice-card {
+  overflow: hidden;
+  border: 1px solid rgba(0, 98, 65, 0.14);
   background: var(--white);
   box-shadow: var(--shadow-card);
-  font-weight: 600;
+}
+
+.notice-image-link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: #0f2622;
+}
+
+.notice-image-link img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform var(--duration-normal) ease;
+}
+
+.notice-image-link:hover img {
+  transform: scale(1.025);
+}
+
+.notice-card-body {
+  padding: 24px;
+}
+
+.notice-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  color: var(--green-accent);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.notice-card-meta time {
+  color: var(--text-black-soft);
+  font-style: normal;
+}
+
+.notice-card h2 {
+  margin-top: 12px;
+  color: var(--glc-green);
+  font-size: 24px;
+  line-height: 1.35;
+  letter-spacing: 0;
+  word-break: keep-all;
+}
+
+.notice-card p {
+  margin-top: 10px;
+  color: var(--text-black-soft);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.notice-cta {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: var(--glc-green);
+  color: var(--white);
+  font-weight: 900;
+  letter-spacing: 0;
+  text-decoration: none;
 }
 
 .site-footer {
@@ -1426,6 +1493,7 @@ a {
   .program-list,
   .curriculum-gallery,
   .smallbiz-detail-grid,
+  .notice-grid,
   .footer-grid {
     grid-template-columns: 1fr;
   }

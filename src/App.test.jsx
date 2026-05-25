@@ -30,4 +30,13 @@ describe('GLC Vite app', () => {
       cleanup();
     }
   });
+
+  it('renders notice application links', () => {
+    render(<App initialPath="/notices" />);
+
+    expect(screen.getByRole('heading', { name: 'AI로 하루만에 나만의 홈페이지 만들기' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'AI로 하루만에 나만의 전자책 만들기' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'AI로 하루만에 나만의 홈페이지 만들기 신청하기' })).toHaveAttribute('href', 'https://forms.gle/LfQMFptfofHxqHWv8');
+    expect(screen.getByRole('link', { name: 'AI로 하루만에 나만의 전자책 만들기 신청하기' })).toHaveAttribute('href', 'https://forms.gle/xZRvjjTvHAt43JUn9');
+  });
 });
