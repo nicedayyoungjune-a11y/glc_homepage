@@ -94,7 +94,8 @@ export default function Home() {
           <div className="hrd-hero-panel hrd-hero-promo-panel" aria-label="추천 교육 프로그램">
             <div className="hrd-hero-promo-head">
               <span>Open Registration</span>
-              <strong>지금 신청 가능한 AI 교육</strong>
+              <strong>AI 실전 교육 신청 안내</strong>
+              <p>포스터를 클릭하면 신청 페이지로 바로 이동합니다.</p>
             </div>
             <div className="hrd-hero-promo-list">
               {heroPromotions.map((promotion) => (
@@ -102,7 +103,11 @@ export default function Home() {
                   <span className="hrd-hero-promo-image">
                     <img src={promotion.image} alt={`${promotion.title} 포스터`} loading="eager" />
                   </span>
-                  <em>{promotion.cta}</em>
+                  <span className="hrd-hero-promo-caption">
+                    <small>{promotion.eyebrow}</small>
+                    <strong>{promotion.title}</strong>
+                    <em>{promotion.cta}</em>
+                  </span>
                 </a>
               ))}
             </div>
