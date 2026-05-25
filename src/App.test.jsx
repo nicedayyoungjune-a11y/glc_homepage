@@ -9,7 +9,10 @@ describe('GLC Vite app', () => {
 
     expect(screen.getByRole('heading', { name: /교육과 컨설팅으로 사람과 기업의 성장을 만듭니다\./i })).toBeInTheDocument();
     expect(screen.getByText(/강의·프레젠테이션/)).toBeInTheDocument();
-    expect(screen.getByText(/AI 행정 실무와 보고서 자동화/)).toBeInTheDocument();
+    expect(screen.getByAltText('AI로 하루만에 나만의 홈페이지 만들기 포스터')).toBeInTheDocument();
+    expect(screen.getByAltText('AI로 하루만에 나만의 전자책 만들기 포스터')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /AI로 하루만에 나만의 홈페이지 만들기 포스터/ })).toHaveAttribute('href', 'https://forms.gle/LfQMFptfofHxqHWv8');
+    expect(screen.getByRole('link', { name: /AI로 하루만에 나만의 전자책 만들기 포스터/ })).toHaveAttribute('href', 'https://forms.gle/xZRvjjTvHAt43JUn9');
     expect(container.querySelectorAll('img[src="/partner-logos/hrdkorea.svg"]')).toHaveLength(2);
   });
 

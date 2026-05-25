@@ -93,16 +93,15 @@ export default function Home() {
 
           <div className="hrd-hero-panel hrd-hero-promo-panel" aria-label="추천 교육 프로그램">
             <div className="hrd-hero-promo-head">
-              <span>Featured Programs</span>
-              <strong>지금 운영 가능한 교육 과정</strong>
+              <span>Open Registration</span>
+              <strong>지금 신청 가능한 AI 교육</strong>
             </div>
             <div className="hrd-hero-promo-list">
               {heroPromotions.map((promotion) => (
-                <a className="hrd-hero-promo-card" href={promotion.link} key={promotion.title}>
-                  <img src={promotion.image} alt="" loading="eager" />
-                  <span>{promotion.eyebrow}</span>
-                  <strong>{promotion.title}</strong>
-                  <p>{promotion.summary}</p>
+                <a className="hrd-hero-promo-card" href={promotion.link} target="_blank" rel="noreferrer" key={promotion.title}>
+                  <span className="hrd-hero-promo-image">
+                    <img src={promotion.image} alt={`${promotion.title} 포스터`} loading="eager" />
+                  </span>
                   <em>{promotion.cta}</em>
                 </a>
               ))}
