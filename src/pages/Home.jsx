@@ -1,16 +1,35 @@
 const partnerArchives = [
-  ['SAMSUNG', '리더십 커뮤니케이션'],
-  ['KAIST', '프레젠테이션 리더십'],
-  ['KORAIL', '고객경험관리'],
-  ['POSCO', '조직 커뮤니케이션'],
-  ['충남지방경찰청', '강의의 기술과 교수전략'],
-  ['고용노동부', '공공기관 교육 컨설팅'],
-  ['한국산업인력공단', 'HRD 역량강화'],
-  ['한국에너지연구원', '조직 소통 교육'],
-  ['동군산병원', '서비스 커뮤니케이션'],
-  ['국군간호사관학교', '교수역량 강화'],
-  ['관광공사', '고객 접점 전략'],
-  ['삼성전자', '프레젠테이션과 보고'],
+  {
+    name: 'KORAIL',
+    title: '고객경험관리',
+    src: '/partner-logos/korail.svg',
+  },
+  {
+    name: 'POSCO',
+    title: '조직 커뮤니케이션',
+    src: '/partner-logos/posco.svg',
+  },
+  {
+    name: '충남경찰청',
+    title: '강의의 기술과 교수전략',
+    src: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Chungnam_Provincial_Police_Agency_Emblem.svg',
+    variant: 'emblem',
+  },
+  {
+    name: '고용노동부',
+    title: '공공기관 교육 컨설팅',
+    src: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Ministry_of_Employment_and_Labor_of_the_Republic_of_Korea_Logo_%28horizontal%29.svg',
+  },
+  {
+    name: '한국산업인력공단',
+    title: 'HRD 역량강화',
+    src: '/partner-logos/hrdkorea.svg',
+  },
+  {
+    name: '한국에너지기술연구원',
+    title: '조직 소통 교육',
+    src: '/partner-logos/kier.png',
+  },
 ];
 
 const metrics = [
@@ -107,9 +126,11 @@ export default function Home() {
         </div>
         <div className="archive-flow">
           <div className="archive-track">
-            {partnerLoop.map(([name, title], index) => (
+            {partnerLoop.map(({ name, title, src, variant }, index) => (
               <article className="archive-item partner-logo" key={`${name}-${index}`}>
-                <strong>{name}</strong>
+                <div className={`partner-logo-frame${variant ? ` is-${variant}` : ''}`}>
+                  <img src={src} alt={`${name} 로고`} loading="lazy" />
+                </div>
                 <span>{title}</span>
               </article>
             ))}

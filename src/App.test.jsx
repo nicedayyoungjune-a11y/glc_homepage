@@ -5,10 +5,11 @@ import { routes } from './routes.js';
 
 describe('GLC Vite app', () => {
   it('renders the home route with the final brand promise', () => {
-    render(<App initialPath="/" />);
+    const { container } = render(<App initialPath="/" />);
 
     expect(screen.getByRole('heading', { name: /교육과 컨설팅으로 사람과 기업의 성장을 만듭니다\./i })).toBeInTheDocument();
     expect(screen.getByText(/강의〮프레젠테이션/)).toBeInTheDocument();
+    expect(container.querySelectorAll('img[src="/partner-logos/hrdkorea.svg"]')).toHaveLength(2);
   });
 
   it('renders the home page as an event-style HRD landing page', () => {
