@@ -2473,10 +2473,12 @@ a {
 .hrd-benefit-grid h3,
 .hrd-process-grid h3,
 .hrd-program-grid h3 {
+  max-width: 100%;
   color: var(--glc-green);
   font-size: 24px;
   line-height: 1.35;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 
 .hrd-benefit-grid p,
@@ -2495,6 +2497,7 @@ a {
 }
 
 .hrd-program-grid article {
+  min-width: 0;
   min-height: 310px;
   padding: 30px 24px;
   border: 1px solid rgba(0, 98, 65, 0.14);
@@ -2517,6 +2520,7 @@ a {
 .hrd-program-grid h3 {
   margin-top: 28px;
   word-break: keep-all;
+  text-wrap: balance;
 }
 
 .hrd-process-grid {
